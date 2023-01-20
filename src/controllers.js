@@ -32,30 +32,44 @@ const createTicket = async (req, res) => {
             id: customerId,
           },
         },
-        seats: {
-          connect: [
-            {
-              id: 1,
-            },
-            {
-              id: 2,
-            },
-            {
-              id: 3,
-            },
-          ],
-        },
         // seats: {
         //   connect: [
         //     {
-        //       seat: {
-        //         connect: {
-        //           id: 1,
-        //         },
-        //       },
+        //       id: 1,
+        //     },
+        //     {
+        //       id: 2,
+        //     },
+        //     {
+        //       id: 3,
         //     },
         //   ],
         // },
+        seats: {
+          create: [
+            {
+              seat: {
+                connect: {
+                  id: 1,
+                },
+              },
+            },
+            {
+              seat: {
+                connect: {
+                  id: 2,
+                },
+              },
+            },
+            {
+              seat: {
+                connect: {
+                  id: 3,
+                },
+              },
+            },
+          ],
+        },
       },
       include: {
         screening: true,
