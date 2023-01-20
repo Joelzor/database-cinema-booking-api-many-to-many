@@ -45,6 +45,17 @@ const createTicket = async (req, res) => {
             },
           ],
         },
+        // seats: {
+        //   connect: [
+        //     {
+        //       seat: {
+        //         connect: {
+        //           id: 1,
+        //         },
+        //       },
+        //     },
+        //   ],
+        // },
       },
       include: {
         screening: true,

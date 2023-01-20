@@ -182,11 +182,11 @@ async function createSeats() {
           id: 2,
         },
       },
-      tickets: {
-        connect: {
-          id: 2,
-        },
-      },
+      // tickets: {
+      //   connect: {
+      //     id: 2,
+      //   },
+      // },
     },
   });
   const seat5 = await prisma.seat.create({
@@ -197,11 +197,11 @@ async function createSeats() {
           id: 1,
         },
       },
-      tickets: {
-        connect: {
-          id: 2,
-        },
-      },
+      // tickets: {
+      //   connect: {
+      //     id: 2,
+      //   },
+      // },
     },
   });
 }
