@@ -112,6 +112,20 @@ async function createTickets() {
       },
     },
   });
+  const ticket2 = await prisma.ticket.create({
+    data: {
+      screening: {
+        connect: {
+          id: 3,
+        },
+      },
+      customer: {
+        connect: {
+          id: 1,
+        },
+      },
+    },
+  });
 }
 
 async function createSeats() {
@@ -123,9 +137,69 @@ async function createSeats() {
           id: 1,
         },
       },
-      tickets: {
+      //   tickets: {
+      //     connect: {
+      //       id: 1,
+      //     },
+      //   },
+    },
+  });
+  const seat2 = await prisma.seat.create({
+    data: {
+      number: 2,
+      screen: {
         connect: {
           id: 1,
+        },
+      },
+      //   tickets: {
+      //     connect: {
+      //       id: 1,
+      //     },
+      //   },
+    },
+  });
+  const seat3 = await prisma.seat.create({
+    data: {
+      number: 3,
+      screen: {
+        connect: {
+          id: 1,
+        },
+      },
+      //   tickets: {
+      //     connect: {
+      //       id: 2,
+      //     },
+      //   },
+    },
+  });
+  const seat4 = await prisma.seat.create({
+    data: {
+      number: 4,
+      screen: {
+        connect: {
+          id: 2,
+        },
+      },
+      tickets: {
+        connect: {
+          id: 2,
+        },
+      },
+    },
+  });
+  const seat5 = await prisma.seat.create({
+    data: {
+      number: 5,
+      screen: {
+        connect: {
+          id: 1,
+        },
+      },
+      tickets: {
+        connect: {
+          id: 2,
         },
       },
     },
